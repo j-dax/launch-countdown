@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Red Hat';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Red Hat'), url('/fonts/static/RedHatText-VariableFont_wght.ttf') format('ttf');
+}
