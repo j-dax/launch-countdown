@@ -58,6 +58,32 @@ body {
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
-.delay {
-  animation-delay: 500ms;
+@keyframes unfold {
+  0%, 20%, 40%, 50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes fold {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%, 100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.wtf {
+  transform: rotateX(90deg);
+}
+
+.anim-top {
+  animation: 800ms infinite linear fold;
+}
+
+.anim-bottom {
+ animation: 800ms infinite linear unfold; 
 }

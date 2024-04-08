@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -14,20 +15,24 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
-        'wiggle': {
-          '0%': { transform: 'rotateX(0deg)' },
-          '50%': { transform: 'rotateX(90deg)' },
-          '100%': { transform: 'rotateX(180deg)' },
-        },
-        'fall': {
+        'roll': {
           '0%': { transform: 'rotateX(0deg)' },
           '100%': { transform: 'rotateX(90deg)' },
+        },
+        'roll-reverse': {
+          '0%': { transform: 'rotateX(90deg)' },
+          '100%': { transform: 'rotateX(0deg)' },
+        },
+        'hold': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
         },
       },
     },
     animation: {
-      'wiggle': 'wiggle 500ms linear infinite',
-      'fall': 'fall 500ms linear infinite',
+      'roll': 'roll 500ms infinite linear, hold 500ms infinite',
+      'roll-reverse': 'roll-reverse 500ms infinite linear, hold 500ms ',
+      'hold': 'hold 500ms infinite linear',
     },
     colors: {
       "space": "#241e2c",
@@ -39,6 +44,27 @@ const config: Config = {
       "cd-drop": "#1a1921"
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({matchUtilities, theme}) {
+      matchUtilities(
+        {
+          'animate-delay': (value) => ({
+            animationDelay: value,
+          }),
+        },
+        { values: theme('transitionDuration') }
+      )
+    }),
+    plugin(function({matchUtilities, theme}) {
+      matchUtilities(
+        {
+          'animate-duration': (value) => ({
+            animationDuration: value,
+          }),
+        },
+        { values: theme('transitionDuration') }
+      )
+    }),
+  ],
 };
 export default config;
