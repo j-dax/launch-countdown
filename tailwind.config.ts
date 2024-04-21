@@ -30,9 +30,8 @@ const config: Config = {
       },
     },
     animation: {
-      'roll': 'roll 500ms infinite linear, hold 500ms infinite',
-      'roll-reverse': 'roll-reverse 500ms infinite linear, hold 500ms ',
-      'hold': 'hold 500ms infinite linear',
+      'roll': 'roll 250ms infinite linear, hold 750ms infinite',
+      'roll-reverse': 'roll-reverse 250ms infinite linear, hold 750ms infinite',
     },
     colors: {
       "space": "#241e2c",

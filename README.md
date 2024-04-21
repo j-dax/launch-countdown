@@ -37,6 +37,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Stack Overflow](https://stackoverflow.com/) - Always helpful in understanding edge cases or expanding on other aspects (re: tailwind plugins)
 - [Mozilla Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) - Mozilla is incredible in showing how things work. This project utilizes some aspects of CSS that I haven't needed before (re: animations and transitions).
 - [Tailwindcss](https://tailwindcss.com/docs/hover-focus-and-other-states)
+- [SVGR](https://react-svgr.com/playground/) - This site showed me how to use svg-specific language in React.
 
 ## Author
 

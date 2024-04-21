@@ -2,6 +2,9 @@
 
 import {useState, useEffect} from "react"
 
+import { Red_Hat_Text } from "next/font/google"
+const RedHatText = Red_Hat_Text({weight: "700", subsets: ['latin']})
+
 import dayjs from "dayjs"
 import duration from "dayjs/plugin/duration"
 dayjs.extend(duration)
@@ -28,27 +31,35 @@ function PintrestSVG({className}: SVGProps) {
   </svg>
 }
 
-function HillsSVG() {
-  return <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="197" className="min-w-full">
-    <defs>
-      <path d="M0 0h1440v197H0z"/>
-    </defs>
-    <g id="a" fill="none" fill-rule="evenodd">
-      <mask id="b" fill="#fff">
-        <use href="#a"/>
-      </mask>
-      <g mask="url(#b)">
-        <path fill="#211A29" d="M1440 50.205L1088.504 0 949.669 50.205 878 25.102 556 0 398.525 50.205l-95.807-25.103-51.328 16.761L45.704 0 0 17.701V160h1440z"/>
-        <path fill="#1A1823" d="M1394.296 1l94.649 69.336 50.047-49.449zM1137.282 42.576l51.328 27.76 80.6-5.426zM884 1l157.475 83.151 80.929-26.062zM351.496 1l138.835 83.151 49.321-28.526z"/>
-        <path fill="#2F2439" d="M0 84.151L351.496 1l138.835 83.151L562 42.576 884 1l157.475 83.151 95.807-41.575 51.328 27.76L1394.296 1 1440 30.317V266H0z"/>
-      </g>
-    </g>
-  </svg>
-}
-
 function Hills() {
   return <div className="absolute bottom-0 min-w-full">
-    <HillsSVG />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 1400 140"
+      className="md:min-w-[50%] md:max-w-[50%]"
+    >
+      <defs>
+        <path id="a" d="M0 0h1440v197H0z" />
+      </defs>
+      <mask id="b" fill="#fff">
+        <use xlinkHref="#a" />
+      </mask>
+      <g mask="url(#b)">
+        <path
+          fill="#211A29"
+          d="M1440 50.205 1088.504 0 949.669 50.205 878 25.102 556 0 398.525 50.205l-95.807-25.103-51.328 16.761L45.704 0 0 17.701V160h1440z"
+        />
+        <path
+          fill="#1A1823"
+          d="m1394.296 1 94.649 69.336 50.047-49.449zm-257.014 41.576 51.328 27.76 80.6-5.426zM884 1l157.475 83.151 80.929-26.062zM351.496 1l138.835 83.151 49.321-28.526z"
+        />
+        <path
+          fill="#2F2439"
+          d="M0 84.151 351.496 1l138.835 83.151L562 42.576 884 1l157.475 83.151 95.807-41.575 51.328 27.76L1394.296 1 1440 30.317V266H0z"
+        />
+      </g>
+    </svg>
     <nav className="absolute min-w-full flex gap-20 justify-center bottom-16">
       <FacebookSVG className="transition duration-[500ms] fill-[#8385A9] hover:fill-cd-top-text" />
       <InstagramSVG className="transition duration-[500ms] fill-[#8385A9] hover:fill-cd-top-text" />
@@ -58,10 +69,9 @@ function Hills() {
 }
 
 function Stars() {
-  //  <Image alt="background layer: stars" src={bgStars} className="min-w-full absolute left-0 top-0"/>
-  return <div className="absolute min-w-full min-h-full">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="569">
-      <path fill="#46485B" fill-rule="evenodd" d="M774 563a3 3 0 110 6 3 3 0 010-6zm-623.5-5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm875 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-523-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm233-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM178 542a3 3 0 110 6 3 3 0 010-6zm1127.5 2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm45.5-10a3 3 0 110 6 3 3 0 010-6zm-565.5-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-784-15a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm278.5-9a3 3 0 110 6 3 3 0 010-6zm207.5-30a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm233-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-699-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1165-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM250 345a3 3 0 110 6 3 3 0 010-6zm450.5-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-614-15a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm520-13a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1169.5-7a3 3 0 110 6 3 3 0 010-6zm-4.5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-875-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm523 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-392-34a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm656 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-1008-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1298-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm520-13a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-145.5-9a3 3 0 110 6 3 3 0 010-6zm-601.5-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm499.5-29a3 3 0 110 6 3 3 0 010-6zm-985.5-10a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1298-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-832-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm33.5-18a3 3 0 110 6 3 3 0 010-6zm431.5-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm366-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm486-39a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM1136 29a3 3 0 110 6 3 3 0 010-6zm-614.5-2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM412 23a3 3 0 110 6 3 3 0 010-6zM1.5 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm366-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-656-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1008 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/>
+  return <div className="absolute min-w-full min-h-full bg-gradient-to-b from-100% to-space">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 700">
+      <path fill="#46485B" d="M774 563a3 3 0 110 6 3 3 0 010-6zm-623.5-5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm875 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-523-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm233-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM178 542a3 3 0 110 6 3 3 0 010-6zm1127.5 2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm45.5-10a3 3 0 110 6 3 3 0 010-6zm-565.5-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-784-15a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm278.5-9a3 3 0 110 6 3 3 0 010-6zm207.5-30a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm233-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-699-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1165-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM250 345a3 3 0 110 6 3 3 0 010-6zm450.5-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-614-15a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm520-13a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1169.5-7a3 3 0 110 6 3 3 0 010-6zm-4.5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-875-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm523 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-392-34a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm656 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-1008-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1298-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm520-13a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-145.5-9a3 3 0 110 6 3 3 0 010-6zm-601.5-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm499.5-29a3 3 0 110 6 3 3 0 010-6zm-985.5-10a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1298-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-465-22a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-832-6a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm33.5-18a3 3 0 110 6 3 3 0 010-6zm431.5-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm366-8a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm50-17a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm486-39a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM1136 29a3 3 0 110 6 3 3 0 010-6zm-614.5-2a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM412 23a3 3 0 110 6 3 3 0 010-6zM1.5 14a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm570-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm366-7a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-656-3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm1008 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/>
     </svg>
   </div>
 }
@@ -81,19 +91,21 @@ function CountdownSplit({n, descriptor, doUpdate}: CountdownSplitProps) {
     <div className="relative flex flex-col bg-cd-drop max-h-[132px] rounded-md">
       {/* The rear number, seen when the middle element folds down */}
       <div className="relative flex items-center gap-1 min-w-32 min-h-32 rounded-md hide-bottom bg-cd-top">
-        <p className="mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text">{nextNum}</p>
+        <p className={`mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text ${RedHatText.className}`}>
+          {nextNum}
+        </p>
       </div>
       {/* The bottom half */}
       <div className="relative flex items-center gap-1 min-w-32 min-h-32 rounded-md hide-top top-[-8rem] bg-cd-bottom">
-        <p className="mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-bottom-text">{num}</p>
+        <p className={`mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-bottom-text ${RedHatText.className}`}>{num}</p>
       </div>
       {/* The folding upper half, text becomes hidden */}
       <div className={`relative flex items-center gap-1 min-w-32 min-h-32 rounded-md hide-bottom top-[-16rem] bg-cd-top border-space border-2${animateUpper}`}>
-        <p className="mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text">{num}</p>
+        <p className={`mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text ${RedHatText.className}`}>{num}</p>
       </div>
       {/* The folding lower half, initially hidden */}
       <div className={`relative flex items-center gap-1 min-w-32 min-h-32 rounded-md hide-top top-[-24rem] bg-cd-bottom border-space border-2${animateLower}`}>
-        <p className="mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text">{nextNum}</p>
+        <p className={`mx-auto text-center text-countdown-timer font-bold text-6xl text-cd-top-text ${RedHatText.className}`}>{nextNum}</p>
       </div>
       {/* Two semicircles, as if carving out part of the countdown */}
       <div className="relative min-w-2 min-h-2 max-w-2 max-h-2 top-[-452px] left-[-4px] rounded-full bg-cd-drop hide-left" />
@@ -111,7 +123,7 @@ type CountdownTimerProps = {
 function CountdownTimer({end, msOffset}: CountdownTimerProps) {
   const update = () => {
     // account for the user loading at a time that doesn't synchronize with the render time
-    setNow(dayjs(Date.now()).subtract(msOffset, 'millisecond'));
+    setNow(dayjs(Date.now()).subtract(msOffset + 500, 'millisecond'));
     setDays(end.diff(now, 'days'));
     setHours(end.diff(now, 'hours') % 24);
     setMinutes(end.diff(now, 'minutes') % 60);
@@ -119,10 +131,10 @@ function CountdownTimer({end, msOffset}: CountdownTimerProps) {
   }
 
   const [now, setNow] = useState(dayjs(Date.now()));
-  const [days, setDays] = useState(end.diff(now, 'days'));
-  const [hours, setHours] = useState(end.diff(now, 'hours') % 24);
-  const [minutes, setMinutes] = useState(end.diff(now, 'minutes') % 60);
-  const [seconds, setSeconds] = useState(end.diff(now, 'seconds') % 60);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   // update the timer every second
   useEffect(() => {
@@ -145,7 +157,7 @@ function CountdownTimer({end, msOffset}: CountdownTimerProps) {
     <CountdownSplit
       n={Math.max(seconds, 0)}
       descriptor={"seconds".toUpperCase()}
-      doUpdate={end.isAfter(now)} />
+      doUpdate={end.diff(now, 'milliseconds') > 990} />
   </>
 }
 
@@ -157,20 +169,22 @@ function Countdown({duration}: CountdownProps) {
   // often, the page is loaded at some time not close to the 200ms gap provided
   // so we wait a little to make sure we're showing at a good time
   const end = dayjs(new Date()).add(duration);
-  return <CountdownTimer end={end} msOffset={end.millisecond()} />
+  return <div className="flex gap-2 flex-nowrap justify-center">
+      <CountdownTimer end={end} msOffset={end.millisecond()} />
+    </div>
 }
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-space to-ground min-h-full overflow-hidden">
       <Stars/>
-      <div className="absolute min-w-full min-h-full flex flex-col justify-center items-center gap-8">
+      <Hills/>
+      <div className="absolute top-0 min-w-full min-h-full flex flex-col justify-center items-center gap-8">
         <p className="mb-16 font-bold text-cd-top-text">We&apos;re launching soon</p>
         <div className="flex gap-8 mb-32">
           <Countdown duration={dayjs.duration({'days': 10})} />
         </div>
       </div>
-      <Hills/>
     </div>
   );
 }
